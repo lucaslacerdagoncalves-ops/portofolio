@@ -1,4 +1,4 @@
-# 🌐 Portfólio Pessoal
+# 🌐 Portfolio Pessoal
 
 Este é o meu portfólio pessoal interativo, desenvolvido como projeto avaliativo para apresentar minhas habilidades, formação e projetos na área de tecnologia.
 
