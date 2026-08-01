@@ -22,6 +22,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Canvas de Fundo / Partículas */
 #interactive-canvas {
     position: fixed;
     top: 0;
@@ -58,7 +59,7 @@ body {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    border: 2px solid #ffffff33;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -84,18 +85,31 @@ body {
     box-shadow: 0 8px 32px var(--accent-glow);
 }
 
+/* Container da Foto de Perfil */
 .profile-avatar {
-    width: 70px;
-    height: 70px;
-    background: var(--primary-color);
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 15px;
-    font-size: 30px;
-    box-shadow: 0 0 20px var(--primary-color);
-    transition: background 0.3s;
+    background: rgba(15, 23, 42, 0.8);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-avatar i {
+    font-size: 45px;
+    color: var(--primary-color);
 }
 
 .hero h1 {
@@ -109,7 +123,7 @@ body {
     transition: color 0.3s;
 }
 
-/* Seções */
+/* Seções Principais */
 .section {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
@@ -139,7 +153,7 @@ body {
     line-height: 1.6;
 }
 
-/* Barras de Habilidade */
+/* Barras de Habilidade Interativas */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -166,7 +180,7 @@ body {
     transition: width 1s ease, background 0.3s;
 }
 
-/* Grid de Projetos */
+/* Grid de Projetos & Card 3D Tilt */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -203,7 +217,7 @@ body {
     transition: color 0.3s;
 }
 
-/* Botão */
+/* Botões dos Repositórios */
 .btn-repo {
     display: inline-block;
     width: 100%;
@@ -234,4 +248,4 @@ footer {
     padding: 20px;
     color: var(--text-muted);
     font-size: 0.85rem;
-}
+    }
